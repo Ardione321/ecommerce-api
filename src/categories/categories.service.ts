@@ -15,20 +15,12 @@ import { UpdateCategoryDto } from './dtos/update-category.dto';
 export class CategoriesService {
     constructor(
         private readonly createCategoryProvider: CreateCategoryProvider,
-    
         private readonly createManyCategoryProvider: CreateManyCategoriesProvider,
-
         private readonly deleteCategoryByIdProvider: DeleteCategoryByIdProvider,
-
         private readonly findAllCategoriesProvider: FindAllCategoriesProvider,
-
         private readonly findCategoryByIdProvider: FindCategoryByIdProvider,
-
         private readonly updateCategoryByIdProvider: UpdateCategoryByIdProvider,
-
         private readonly reactivateCategoryByIdProvider: ReactivateCategoryByIdProvider
-
-        
     ){}
 
     public async createCategory(createCategoryDto: CreateCategoryDto) : Promise<Categories> {
