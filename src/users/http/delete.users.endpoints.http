@@ -1,0 +1,4 @@
+DELETE http://localhost:3000/users/soft-delete
+?id=1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTczMDM4Mzk2MiwiZXhwIjoxNzMwMzg3NTYyLCJhdWQiOiJsb2NhbGhvc3Q6MzAwMCIsImlzcyI6ImxvY2FsaG9zdDozMDAwIn0.FyreMwHqjV6ZKed0Dq4QAkyzA8o5WK8rksAIKhAnfLo
+Content-Type: application/json

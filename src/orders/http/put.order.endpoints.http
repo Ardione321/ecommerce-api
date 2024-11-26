@@ -1,0 +1,30 @@
+PUT http://localhost:3000/orders/reactivate-by-id/16694
+
+
+PUT http://localhost:3000/orders/update-by-id 
+Content-Type: application/json
+{
+    "orderId": 16693,
+    "shippingAddress": "123 MaCoasdasduntry",
+    "status": "Confirmed"
+}
+
+PUT http://localhost:3000/orders/update-order-item
+Content-Type: application/json
+
+{
+    "items": [
+        {
+            "id": 32123,       
+            "quantity": 800,          
+            "productId": 17,
+            "orderId": 16694
+        },
+        {
+            "id": 32124,             
+            "quantity": 800,         
+            "productId": 18,
+            "orderId": 16694  
+        }
+    ]
+}

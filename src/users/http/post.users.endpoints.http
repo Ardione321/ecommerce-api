@@ -1,0 +1,49 @@
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "firstName": "John9",
+    "lastName": "Doe9",
+    "email": "johndoe@example9.com",
+    "password": "securePassword123@",
+    "address": "123 Main Street, Springfield, USA"
+}
+
+POST http://localhost:3000/users/register-many
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzOTAxNTIsImV4cCI6MTczMDM5Mzc1MiwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.Xe7uKplc1492w_LdD42tpxHY8SI22Xf9NmHqujKwqmw
+Content-Type: application/json
+{
+    "users": [
+        {
+            "firstName": "John10",
+            "lastName": "Doe11",
+            "email": "johndoe@example10.com",
+            "password": "securePassword123@",
+            "address": "123 Main Street, Springfield, USA"
+        },
+        {
+            "firstName": "John7",
+            "lastName": "Doe7",
+            "email": "johndoe@example11.com",
+            "password": "securePassword123@",
+            "address": "123 Main Street, Springfield, USA"
+        },
+        {
+            "firstName": "John8",
+            "lastName": "Doe8",
+            "email": "johndoe@example12.com",
+            "password": "securePassword123@",
+            "address": "123 Main Street, Springfield, USA"
+        },
+        {
+            "firstName": "John8",
+            "lastName": "Doe8",
+            "email": "johndoe@example13.com",
+            "password": "securePassword123@",
+            "address": "123 Main Street, Springfield, USA"
+        }
+    ]
+}
+
+
+

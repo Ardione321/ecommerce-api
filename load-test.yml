@@ -1,0 +1,45 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 60   # Run the test for 60 seconds
+      arrivalRate: 20 # Start with 20 request per second
+
+scenarios:
+  - flow:
+      - post:
+          url: '/orders/create-many'
+          json:
+            orders:
+              - userId: 3
+                shippingAddress: "123 Main St, City, Country"
+                status: "Pending"
+                totalAmount: 2
+                orderItems:
+                  - productId: 17
+                    quantity: 48
+                    description: "Smart Refrigerator"
+                  - productId: 18
+                    quantity: 20
+                    description: "4K Ultra HD TV"
+              - userId: 2
+                shippingAddress: "456 Elm St, City, Country"
+                status: "Pending"
+                totalAmount: 2
+                orderItems:
+                  - productId: 17
+                    quantity: 300
+                    description: "Smart Refrigerator"
+                  - productId: 18
+                    quantity: 110
+                    description: "4K Ultra HD TV"
+              - userId: 1
+                shippingAddress: "789 Maple St, City, Country"
+                status: "Pending"
+                totalAmount: 2
+                orderItems:
+                  - productId: 17
+                    quantity: 48
+                    description: "Smart Refrigerator"
+                  - productId: 18
+                    quantity: 20
+                    description: "4K Ultra HD TV"

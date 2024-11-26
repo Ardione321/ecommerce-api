@@ -1,0 +1,11 @@
+PUT http://localhost:3000/products/reactivate/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzOTYzODQsImV4cCI6MTczMDM5OTk4NCwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9._DsRy7Y6JWQNwBU5n_oBkIUb2hPsmAxIBW1JFjGMAmA
+
+PUT http://localhost:3000/products/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzOTYzODQsImV4cCI6MTczMDM5OTk4NCwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9._DsRy7Y6JWQNwBU5n_oBkIUb2hPsmAxIBW1JFjGMAmA
+{
+    "id": 17,
+    "stock": 5000000
+
+}

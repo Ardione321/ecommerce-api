@@ -1,0 +1,9 @@
+POST http://localhost:3000/reviews/create
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "productId": 18,
+    "rating": 10,
+    "comment": "MAGANDA TO AH"
+}

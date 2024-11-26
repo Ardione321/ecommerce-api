@@ -1,0 +1,4 @@
+GET http://localhost:3000/reviews/get-all
+
+
+GET http://localhost:3000/reviews/get-by-id/2

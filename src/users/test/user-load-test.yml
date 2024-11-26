@@ -1,0 +1,97 @@
+# This file is for load testing the endpoints in the Users module.
+# It includes tests for user registration, bulk user registration, reactivation, updating user details, 
+# fetching user information, and soft deleting users.
+# The goal is to simulate various user interactions and measure the system's performance under load.
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60 # Run the test for 60 seconds
+      arrivalRate: 20 # Start with 20 request per second 
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - name: "Register User"
+    flow:
+      - post:
+          url: "/users/register"
+          json:
+            firstName: "John9"
+            lastName: "Doe9"
+            email: "johndoe@example9.com"
+            password: "securePassword123@"
+            address: "123 Main Street, Springfield, USA"
+
+  - name: "Register Many Users"
+    flow:
+      - post:
+          url: "/users/register-many"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzOTAxNTIsImV4cCI6MTczMDM5Mzc1MiwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.Xe7uKplc1492w_LdD42tpxHY8SI22Xf9NmHqujKwqmw"
+          json:
+            users:
+              - firstName: "John10"
+                lastName: "Doe11"
+                email: "johndoe@example10.com"
+                password: "securePassword123@"
+                address: "123 Main Street, Springfield, USA"
+              - firstName: "John7"
+                lastName: "Doe7"
+                email: "johndoe@example11.com"
+                password: "securePassword123@"
+                address: "123 Main Street, Springfield, USA"
+              - firstName: "John8"
+                lastName: "Doe8"
+                email: "johndoe@example12.com"
+                password: "securePassword123@"
+                address: "123 Main Street, Springfield, USA"
+              - firstName: "John8"
+                lastName: "Doe8"
+                email: "johndoe@example13.com"
+                password: "securePassword123@"
+                address: "123 Main Street, Springfield, USA"
+
+  - name: "Reactivate User"
+    flow:
+      - put:
+          url: "/users/reactivate/1"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzODQ1MDUsImV4cCI6MTczMDM4ODEwNSwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.ti3t3XtbkejopBae0LqLBL2eL9OEmf-MmNcLIRL_Hv4"
+
+  - name: "Update User"
+    flow:
+      - put:
+          url: "/users/update"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzOTExMzEsImV4cCI6MTczMDM5NDczMSwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.Mr8FddgWre5rMvhpZKYH0zND_02qYmkN9t-gdsmZ4h8"
+          json:
+            id: 1
+            firstName: "Ardione2"
+            lastName: "David2"
+            email: "ardioned2@gmail.com"
+            password: "securePassword1233@"
+            address: "Tondo Manila"
+
+  - name: "Get User by Email"
+    flow:
+      - get:
+          url: "/users/email/johndoe@example1.com"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzODU1OTcsImV4cCI6MTczMDM4OTE5NywiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.mgzYn_PdTz1z1YCsxV0PEJhXhZAf0vU0oQg8kTq-rx0"
+
+  - name: "Get All Users"
+    flow:
+      - get:
+          url: "/users"
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzODU1OTcsImV4cCI6MTczMDM4OTE5NywiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.mgzYn_PdTz1z1YCsxV0PEJhXhZAf0vU0oQg8kTq-rx0"
+
+  - name: "Soft Delete User"
+    flow:
+      - delete:
+          url: "/users/soft-delete"
+          qs:
+            id: 1
+          headers:
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoiam9obmRvZUBleGFtcGxlLmNvbSIsImlhdCI6MTczMDM4Mzk2MiwiZXhwIjoxNzMwMzg3NTYyLCJhdWQiOiJsb2NhbGhvc3Q6MzAwMCIsImlzcyI6ImxvY2FsaG9zdDozMDAwIn0.FyreMwHqjV6ZKed0Dq4QAkyzA8o5WK8rksAIKhAnfLo"

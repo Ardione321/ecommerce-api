@@ -1,0 +1,43 @@
+POST http://localhost:3000/categories/create
+Content-Type: application/json
+
+{
+    "name": "Foodss",
+    "description": "Foodssss"
+}
+
+
+POST http://localhost:3000/categories/create-many
+Content-Type: application/json
+
+{
+    "categories": [
+        {
+            "name": "Beverages",
+            "description": "Various types of drinks"
+        },
+        {
+            "name": "Snacks",
+            "description": "Light meals and snacks"
+        },
+        {
+            "name": "Desserts",
+            "description": "Sweet treats and desserts"
+        },
+        {
+            "name": "Fruits",
+            "description": "Fresh fruits and seasonal produce"
+        },
+        {
+            "name": "Vegetables",
+            "description": "Organic and fresh vegetables"
+        },
+        {
+            "name": "Dairy",
+            "description": "Milk and dairy products"
+        }
+    ]
+}
+
+
+

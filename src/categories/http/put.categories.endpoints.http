@@ -1,0 +1,9 @@
+PUT http://localhost:3000/categories/reactivate/1
+
+PUT http://localhost:3000/categories/update
+Content-Type: application/json
+{   
+    "id": 1,
+    "name": "Electronics With New AI",
+    "description": "Devices, gadgets, and other electronic items."
+}

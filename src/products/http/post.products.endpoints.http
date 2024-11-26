@@ -1,0 +1,221 @@
+POST http://localhost:3000/products/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzA2MTc4OTQsImV4cCI6MTczMDYyMTQ5NCwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.VinFLfkYzIU7eRHvwr2tjf876YE6zr5QOVZ70vqUXMY
+{
+  "name": "Aircon16",
+  "price": 29923,
+  "description": "This is a sample product description that provides details about the product.",
+  "categoryId": 1,
+  "stock": 100,
+  "images": [
+    "https://example.com/image1.jpg",
+    "https://example.com/image2.jpg"
+  ]
+}
+
+POST http://localhost:3000/products/create-many
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzA2MTc4OTQsImV4cCI6MTczMDYyMTQ5NCwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.VinFLfkYzIU7eRHvwr2tjf876YE6zr5QOVZ70vqUXMY
+{
+  "products": [
+    {
+      "name": "Smart Refrigerator",
+      "price": 1200,
+      "description": "A smart refrigerator with Wi-Fi connectivity and energy efficiency.",
+      "categoryId": 1,
+      "stock": 50,
+      "images": [
+        "https://example.com/refrigerator1.jpg",
+        "https://example.com/refrigerator2.jpg"
+      ]
+    },
+    {
+      "name": "4K Ultra HD TV",
+      "price": 800,
+      "description": "A stunning 4K Ultra HD Smart TV with immersive sound.",
+      "categoryId": 1,
+      "stock": 30,
+      "images": [
+        "https://example.com/tv1.jpg",
+        "https://example.com/tv2.jpg"
+      ]
+    },
+    {
+      "name": "Fresh Orange Juice",
+      "price": 3.50,
+      "description": "Natural fresh orange juice, packed with vitamins.",
+      "categoryId": 46,
+      "stock": 200,
+      "images": [
+        "https://example.com/orangejuice1.jpg",
+        "https://example.com/orangejuice2.jpg"
+      ]
+    },
+    {
+      "name": "Cola Beverage",
+      "price": 1.50,
+      "description": "A refreshing cola drink, perfect for any occasion.",
+      "categoryId": 46,
+      "stock": 250,
+      "images": [
+        "https://example.com/cola1.jpg",
+        "https://example.com/cola2.jpg"
+      ]
+    },
+    {
+      "name": "Potato Chips",
+      "price": 1.99,
+      "description": "Crispy and salty potato chips in various flavors.",
+      "categoryId": 47,
+      "stock": 150,
+      "images": [
+        "https://example.com/potatochips1.jpg",
+        "https://example.com/potatochips2.jpg"
+      ]
+    },
+    {
+      "name": "Chocolate Bar",
+      "price": 1.00,
+      "description": "Rich and creamy chocolate bars for a sweet treat.",
+      "categoryId": 47,
+      "stock": 200,
+      "images": [
+        "https://example.com/chocolatebar1.jpg",
+        "https://example.com/chocolatebar2.jpg"
+      ]
+    },
+    {
+      "name": "Chocolate Cake",
+      "price": 15.00,
+      "description": "Delicious chocolate cake topped with rich chocolate frosting.",
+      "categoryId": 48,
+      "stock": 30,
+      "images": [
+        "https://example.com/chocolatecake1.jpg",
+        "https://example.com/chocolatecake2.jpg"
+      ]
+    },
+    {
+      "name": "Vanilla Ice Cream",
+      "price": 5.00,
+      "description": "Creamy vanilla ice cream, perfect for dessert.",
+      "categoryId": 48,
+      "stock": 50,
+      "images": [
+        "https://example.com/vanillaicecream1.jpg",
+        "https://example.com/vanillaicecream2.jpg"
+      ]
+    },
+    {
+      "name": "Organic Apples",
+      "price": 1.20,
+      "description": "Fresh organic apples sourced from local farms.",
+      "categoryId": 49,
+      "stock": 100,
+      "images": [
+        "https://example.com/apples1.jpg",
+        "https://example.com/apples2.jpg"
+      ]
+    },
+    {
+      "name": "Bananas",
+      "price": 0.50,
+      "description": "Fresh bananas, perfect for snacking or smoothies.",
+      "categoryId": 49,
+      "stock": 150,
+      "images": [
+        "https://example.com/bananas1.jpg",
+        "https://example.com/bananas2.jpg"
+      ]
+    },
+    {
+      "name": "Almond Milk",
+      "price": 2.50,
+      "description": "Creamy almond milk, perfect for smoothies and cereals.",
+      "categoryId": 51,
+      "stock": 80,
+      "images": [
+        "https://example.com/almondmilk1.jpg",
+        "https://example.com/almondmilk2.jpg"
+      ]
+    },
+    {
+      "name": "Greek Yogurt",
+      "price": 3.00,
+      "description": "Thick and creamy Greek yogurt, great for breakfast or snacks.",
+      "categoryId": 51,
+      "stock": 60,
+      "images": [
+        "https://example.com/greekyogurt1.jpg",
+        "https://example.com/greekyogurt2.jpg"
+      ]
+    },
+    {
+      "name": "Electric Kettle",
+      "price": 30,
+      "description": "Fast boiling electric kettle for all your hot beverage needs.",
+      "categoryId": 1,
+      "stock": 20,
+      "images": [
+        "https://example.com/kettle1.jpg",
+        "https://example.com/kettle2.jpg"
+      ]
+    },
+    {
+      "name": "Green Smoothie",
+      "price": 4.00,
+      "description": "A nutritious green smoothie made with spinach and bananas.",
+      "categoryId": 46,
+      "stock": 100,
+      "images": [
+        "https://example.com/greensmoothie1.jpg",
+        "https://example.com/greensmoothie2.jpg"
+      ]
+    },
+    {
+      "name": "Veggie Chips",
+      "price": 2.50,
+      "description": "Healthy and crunchy veggie chips in various flavors.",
+      "categoryId": 47,
+      "stock": 120,
+      "images": [
+        "https://example.com/veggiechips1.jpg",
+        "https://example.com/veggiechips2.jpg"
+      ]
+    },
+    {
+      "name": "Lemon Tart",
+      "price": 10.00,
+      "description": "Tangy lemon tart with a buttery crust, a refreshing dessert.",
+      "categoryId": 48,
+      "stock": 25,
+      "images": [
+        "https://example.com/lemontart1.jpg",
+        "https://example.com/lemontart2.jpg"
+      ]
+    },
+    {
+      "name": "Strawberries",
+      "price": 3.00,
+      "description": "Fresh strawberries, perfect for desserts and snacking.",
+      "categoryId": 49,
+      "stock": 80,
+      "images": [
+        "https://example.com/strawberries1.jpg",
+        "https://example.com/strawberries2.jpg"
+      ]
+    },
+    {
+      "name": "Cheddar Cheese",
+      "price": 4.50,
+      "description": "Delicious cheddar cheese, perfect for sandwiches and snacks.",
+      "categoryId": 51,
+      "stock": 50,
+      "images": [
+        "https://example.com/cheddarcheese1.jpg",
+        "https://example.com/cheddarcheese2.jpg"
+      ]
+    }
+  ]
+}
+

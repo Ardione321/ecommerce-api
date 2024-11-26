@@ -1,0 +1,1 @@
+DELETE http://localhost:3000/reviews/delete-by-id/2

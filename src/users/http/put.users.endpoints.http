@@ -1,0 +1,15 @@
+PUT http://localhost:3000/users/reactivate/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzODQ1MDUsImV4cCI6MTczMDM4ODEwNSwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.ti3t3XtbkejopBae0LqLBL2eL9OEmf-MmNcLIRL_Hv4
+
+PUT http://localhost:3000/users/update
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImVtYWlsIjoiam9obmRvZUBleGFtcGxlMS5jb20iLCJpYXQiOjE3MzAzOTExMzEsImV4cCI6MTczMDM5NDczMSwiYXVkIjoibG9jYWxob3N0OjMwMDAiLCJpc3MiOiJsb2NhbGhvc3Q6MzAwMCJ9.Mr8FddgWre5rMvhpZKYH0zND_02qYmkN9t-gdsmZ4h8
+
+{   
+    "id": 1,
+    "firstName": "Ardione2",
+    "lastName": "David2",
+    "email": "ardioned2@gmail.com",
+    "password": "securePassword1233@",
+    "address": "Tondo Manila"
+}
